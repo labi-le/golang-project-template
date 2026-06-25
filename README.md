@@ -1,4 +1,4 @@
-# project-name
+# golang-project-template
 
 project description
 
@@ -16,7 +16,7 @@ make install
 ## Usage
 
 ```
-Usage of project-name:
+Usage of golang-project-template:
 ...
 ...
 ...

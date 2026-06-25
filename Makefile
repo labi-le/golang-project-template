@@ -1,4 +1,4 @@
-PACKAGE = project-name
+PACKAGE = $(notdir $(CURDIR))
 
 MAIN_PATH = cmd/main.go
 BUILD_PATH = build/package/
@@ -22,7 +22,7 @@ LDFLAGS=-ldflags="-X '${FULL_PACKAGE}/internal.Version=${VERSION}' \
 .phony: run
 
 run:
-	go run $(MAIN_PATH) -node_discover=true -debug -scan_delay 1s
+	go run $(MAIN_PATH)
 
 build: clean
 	go build $(LDFLAGS) -v -o $(BUILD_PATH)$(PACKAGE) $(MAIN_PATH)
