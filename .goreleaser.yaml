@@ -1,7 +1,4 @@
 version: 2
-# project_name НЕ задан намеренно — goreleaser возьмёт имя текущей директории.
-# В CI (actions/checkout) это совпадает с именем репозитория.
-# Локально совпадает, если клонировать без явного указания целевой директории.
 before:
   hooks:
     - go mod tidy
@@ -44,7 +41,6 @@ release:
   make_latest: true
 nfpms:
   - id: default
-    # package_name НЕ задан — дефолтится в project_name.
     homepage: 'https://github.com/labi-le/golang-project-template'
     maintainer: 'labi-le'
     description: "TODO: project description"
